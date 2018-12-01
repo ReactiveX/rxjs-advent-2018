@@ -1,0 +1,32 @@
+{
+  "name": "rxjs-advent-2018",
+  "version": "1.0.0",
+  "description": "RxJS Advent Calendar for 2018",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattpodwysocki/rxjs-advent-2018.git"
+  },
+  "keywords": [
+    "RxJS",
+    "Advent",
+    "Reactive",
+    "Reactive-Programming"
+  ],
+  "author": "Matthew Podwysocki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattpodwysocki/rxjs-advent-2018/issues"
+  },
+  "homepage": "https://github.com/mattpodwysocki/rxjs-advent-2018#readme",
+  "devDependencies": {
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.1"
+  },
+  "dependencies": {
+    "rxjs": "^6.3.3"
+  }
+}
