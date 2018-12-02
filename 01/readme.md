@@ -1,4 +1,4 @@
-# Creating an Observable
+# Day 1 - Creating an Observable
 
 The first entry for our calendar is creating an Observable. 
 

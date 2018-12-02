@@ -9,7 +9,8 @@ To run each entry, simply using ts-node such as the following:
 $ ts-node 01/index.ts
 ```
 
-1 - [Creating An Observable](01/readme.md)
+1. [Creating An Observable](01/readme.md)
+2. [Sequences over time](02/readme.md)
 
 ## License
 
