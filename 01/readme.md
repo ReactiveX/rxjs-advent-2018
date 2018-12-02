@@ -18,7 +18,7 @@ Let's walk through the [first example](index.ts), creating an Observable.  First
 import { Observable } from 'rxjs';
 ```
 
-Creating an Observable gives you a sense of the Observable lifecycle. When you create a new Observable, you are passed in an Observer which you can emit data to at any point, 0 to infinite number of times `next` can be called, followed by an optional `error` or `complete` call.  Finally, when we create our Observable, we also include any teardown logic such as clearing a timeout or interval, or cancelling an imcomplete network request.
+Creating an Observable gives you a sense of the Observable lifecycle. When you create a new Observable, you pass in an Observer which you can emit data to at any point, 0 to infinite number of times `next` can be called, followed by an optional `error` or `complete` call.  Finally, when we create our Observable, we also include any teardown logic such as clearing a timeout or interval, or cancelling an incomplete network request.
 
 ```typescript
 const source$ = new Observable<number>(observer => {
@@ -54,7 +54,7 @@ const number$ = new Observable<number>(observer => {
 Next, we can create an observer or data sink to emit data values into at any point.  Remember from above, we have three choices, 0 to infinite data via `next`, and handling errors via `error` and handling completion via `complete`.  In this case, we are not worried about errors, so we will only implement `next` and `complete`.
 
 ```typescript
-// Handle only the next and completion handkers
+// Handle only the next and completion handlers
 const observer = {
   next: (x: number) => {
     console.log(`Next: ${x}`);
@@ -65,7 +65,7 @@ const observer = {
 };
 ```
 
-Finally, we can tie it all together, calling `subscribe` on the Observable with our Observer instance.  This will return our subscription that we can unsubscribe from at any time.  Note that since the inner observer calls `complete`, the teardown logic will happen automatically and the supscription automatically unsubscribed.
+Finally, we can tie it all together, calling `subscribe` on the Observable with our Observer instance.  This will return our subscription that we can unsubscribe from at any time.  Note that since the inner observer calls `complete`, the teardown logic will happen automatically and the subscription automatically unsubscribes.
 
 ```typescript
 // Subscribe to the Observable with our obsercer
