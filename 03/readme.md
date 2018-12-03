@@ -1,6 +1,6 @@
 # Day 3 - Creating Observables the easy way!
 
-In the [previous entry](../02/readme.md), we covered a bit more about Observable creation, but once again we were in the weeds showing how the magic is made. Now that you understand the basics, let's make it easy for you going forward.  Built in to RxJS are a number of predefined ways of creating Observables such as:
+In the [previous entry](../02/readme.md), we covered a bit more about Observable creation, but once again we were in the weeds showing how the magic is made. Now that you understand the basics, let's make it easy for you going forward.  Built into RxJS are a number of predefined ways of creating Observables such as:
 
 Conversions:
 - `bindCallback` - binds a callback to an Observable
@@ -19,7 +19,7 @@ Creation:
 - `never` - creates an Observable that never emits a value
 - `of` - creates an Observable from a list of arguments
 - `range` - creates an Observable from a range of numbers
-- `throwError` - creates an errord Observable which throws the given error
+- `throwError` - creates an error Observable which throws the given error
 - `timer` - creates an Observable that emits at the first time, and repeats on the period time if given
 
 Today, we're going to talk a little bit about the creation operations since they are the easiest way to get started. 
@@ -138,7 +138,7 @@ const subscription =  number$.subscribe({
   });
 ```
 
-Running our solution now will look like this where we transformed our numbers into characters based upon their character code"
+Running our solution now will look like this where we transformed our numbers into characters based upon their character code:
 ```bash
 $ ts-node 03/index.ts
 Next: +
@@ -147,4 +147,4 @@ Next: -
 Complete!
 ```
 
-Stay tuned to tomorrow's session where we'll cover more about creation such as values over time and conversions!
+Stay tuned to tomorrow's session where we'll cover more about creation, such as values over time and conversions!
