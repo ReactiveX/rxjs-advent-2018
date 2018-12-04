@@ -12,6 +12,7 @@ $ ts-node 01/index.ts
 1. [Creating An Observable](01/readme.md)
 2. [Sequences over time](02/readme.md)
 3. [Creating Observables the easy way!](03/readme.md)
+4. [Creating delayed and polling operations](04/readme.md)
 
 ## License
 
