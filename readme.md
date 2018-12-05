@@ -6,7 +6,7 @@ This is the first annual RxJS Advent Calendar with 25 lessons on using [RxJS](ht
 
 To run each entry, simply using ts-node such as the following:
 ```bash
-$ ts-node 01/index.ts
+$ npx ts-node 01/index.ts
 ```
 
 1. [Creating An Observable](01/readme.md)

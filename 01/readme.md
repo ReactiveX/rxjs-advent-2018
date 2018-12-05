@@ -74,7 +74,7 @@ const subscription = number$.subscribe(observer);
 
 This then emits the following data:
 ```bash
-$ ts-node 01/index.ts
+$ npx ts-node 01/index.ts
 Next: 1
 Next: 2
 Next: 3
@@ -95,7 +95,7 @@ setTimeout(() => subscription.unsubscribe(), 2500);
 
 This then changes the output to the following:
 ```bash
-$ ts-node 01/index.ts
+$ npx ts-node 01/index.ts
 Next: 1
 Next: 2
 ```

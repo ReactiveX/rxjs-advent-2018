@@ -56,7 +56,7 @@ const subscription2 = source2$.subscribe(observer(2));
 
 Running that via `ts-node` gives us the following:
 ```bash
-$ ts-node 03/index.ts
+$ npx ts-node 03/index.ts
 ID 1 Next: 1
 ID 1 Next: 2
 ID 1 Next: 3
@@ -87,7 +87,7 @@ const number2$ = range(3, 3, asapScheduler);
 Using the above subscription techniques to track which one we're listening to, let's run through the values.
 
 ```bash
-$ ts-node 03/index.ts
+$ npx ts-node 03/index.ts
 ID 1 Next: 0
 ID 1 Next: 1
 ID 1 Next: 2
@@ -140,7 +140,7 @@ const subscription =  number$.subscribe({
 
 Running our solution now will look like this where we transformed our numbers into characters based upon their character code:
 ```bash
-$ ts-node 03/index.ts
+$ npx ts-node 03/index.ts
 Next: +
 Next: ,
 Next: -

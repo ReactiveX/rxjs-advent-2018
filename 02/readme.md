@@ -69,7 +69,7 @@ const subscription = once(42, animationFrameScheduler)
 
 Running this, we get the following:
 ```bash
-$ ts-node 02/index.ts
+$ npx ts-node 02/index.ts
 Next: 42
 Complete!
 ```

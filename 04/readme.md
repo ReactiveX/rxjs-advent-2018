@@ -31,7 +31,7 @@ poll$.subscribe({
 Running this via `ts-node` gives us the following where it shows the first value is 0, and then it completes the stream.
 
 ```bash
-$ ts-node 04/index.ts
+$ npx ts-node 04/index.ts
 Delayed by 500ms item: 0
 Delayed complete!
 ```
@@ -59,7 +59,7 @@ setTimeout(() => subscription.unsubscribe(), 4000);
 
 Running this gives us the following result which truncates after 4 seconds.
 ```bash
-$ ts-node 04/index.ts
+$ npx ts-node 04/index.ts
 Delayed by 500ms item: 0
 Delayed by 500ms item: 1
 Delayed by 500ms item: 2
@@ -87,7 +87,7 @@ poll$
 
 Running this now gives us the following, and note that this sequence does terminate with a `complete` call unlike the `unsubscribe()` call we did above.
 ```bash
-$ ts-node 04/index.ts
+$ npx ts-node 04/index.ts
 Delayed by 500ms item: 0
 Delayed by 500ms item: 1
 Delayed by 500ms item: 2
@@ -124,7 +124,7 @@ poll$
 Running our example once again, we can take 4 items and then truncate the observable at that point. 
 
 ```bash
-$ ts-node 04/index.ts
+$ npx ts-node 04/index.ts
 Delayed by 1000ms item: 0
 Delayed by 1000ms item: 1
 Delayed by 1000ms item: 2
