@@ -97,7 +97,7 @@ Delayed complete!
 
 # The interval operation
 
-The `interval` creation operation is quite straight forward to create an interval at a specified period of time. 
+The `interval` creation operation is quite straightforward to create an interval at a specified period of time. 
 
 ```typescript
 interval(period: number, scheduler?: SchedulerLike): Observable<number>;
