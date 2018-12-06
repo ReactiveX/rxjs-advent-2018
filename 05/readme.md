@@ -1,6 +1,6 @@
 # Day 5 - Converting to Observables
 
-In the [previous entry](../04/readme.md), we covered  creating polling and timed oeprations via `timer` and `interval`.  Today, we're still covering Observable creation, this time, by converting existing data structures to Observables via the `from` operation.  This `from` operation matches the [`Array.from`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from) method which was new as of ES2015.
+In the [previous entry](../04/readme.md), we covered creating polling and timed operations via `timer` and `interval`.  Today, we're still covering Observable creation, this time, by converting existing data structures to Observables via the `from` operation.  This `from` operation matches the [`Array.from`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from) method which was new as of ES2015.
 
 ## Using the from operation
 
@@ -67,7 +67,7 @@ import { map } from 'rxjs/operators';
 
 const array = [1, 2, 3];
 const array$ = from(array)
-  .pipe(map((_, i_) => i));
+  .pipe(map((_, i) => i));
 
 const subscription = array$.subscribe({
     next: x => console.log(`Next: ${x}`),
@@ -135,7 +135,7 @@ Complete!
 
 ## Converting an Observable to an Observable
 
-Another thing we can convert is an Observable to yet another Observable.  There are a number of libraries that implement the Observable constract which has the `subscribe` method, just as the `Promise` exposes the `then` method.  For example, we could take something from Redux and convert it to an RxJS Observable.  In this example, we'll just use another RxJS Observable, but it could be anything that implements the `Observable` contract.
+Another thing we can convert is an Observable to yet another Observable.  There are a number of libraries that implement the Observable contract which has the `subscribe` method, just as the `Promise` exposes the `then` method.  For example, we could take something from Redux and convert it to an RxJS Observable.  In this example, we'll just use another RxJS Observable, but it could be anything that implements the `Observable` contract.
 
 ```typescript
 import { from, Observable } from 'rxjs';
