@@ -1,6 +1,6 @@
 # 2018 RxJS Advent Calendar
 
-This is the first annual RxJS Advent Calendar with 25 lessons on using [RxJS](https://github.com/reactivex/rxjs). All advent entries are written in TypeScript and can be run via [ts-node](https://www.npmjs.com/package/ts-node).
+This is the first annual RxJS Advent Calendar with 25 lessons on using [RxJS](https://github.com/reactivex/rxjs). All advent entries are written in TypeScript and can be run via in Node.js using `npx` and [ts-node](https://www.npmjs.com/package/ts-node).  Follow along online at my Twitch Channel, [BluerThanBlueFalcon](https://www.twitch.tv/bluerthanbluefalcon/)!
  
 ## Daily Entries
 

@@ -6,11 +6,7 @@ Conversions:
 - `bindCallback` - binds a callback to an Observable
 - `bindNodeCallback` - binds a Node.js style error callback to an Observable
 - `from` - converts a number of structures to an Observable such as Arrays, Promises, Observables, Iterables, etc.
-- `fromArray` - converts an array
 - `fromEvent`/`fromEventPattern` - converts DOM events and `EventEmitter`
-- `fromIterable` - Converts a sequence which exposes the `Symbol.iterator` property 
-- `fromObservable` - Converts an Observable which exposes the `Symbol.observable` property
-- `fromPromise` - converts a `Promise`
 
 Creation:
 - `generate` - creates an Observable based upon a for loop behavior
