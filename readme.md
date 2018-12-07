@@ -13,6 +13,8 @@ $ npx ts-node 01/index.ts
 2. [Sequences over time](02/readme.md)
 3. [Creating Observables the easy way!](03/readme.md)
 4. [Creating delayed and polling operations](04/readme.md)
+5. [Converting to Observables](05/readme.md)
+6. [Converting Events to Observables](06/readme.md)
 
 ## License
 
