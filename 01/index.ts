@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
 
 let n = 0;
-let id = 0;
+let id: NodeJS.Timeout = null;
 
 // Create an Observable from scratch
 const number$ = new Observable<number>(observer => {
