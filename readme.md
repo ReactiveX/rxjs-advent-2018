@@ -15,6 +15,7 @@ $ npx ts-node 01/index.ts
 4. [Creating delayed and polling operations](04/readme.md)
 5. [Converting to Observables](05/readme.md)
 6. [Converting Events to Observables](06/readme.md)
+7. [Pipe Dreams](07/readme.md)
 
 ## License
 
