@@ -16,6 +16,7 @@ $ npx ts-node 01/index.ts
 5. [Converting to Observables](05/readme.md)
 6. [Converting Events to Observables](06/readme.md)
 7. [Pipe Dreams](07/readme.md)
+8. [Mapping and Filtering](08/readme.md)
 
 ## License
 

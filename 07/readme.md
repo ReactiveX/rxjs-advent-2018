@@ -33,7 +33,9 @@ function map<T, R>(source: Observable<T>, selector: (value: T, index: number) =>
         }
 
         observer.next(value);
-      }
+      },
+      error: err => observer.error(err),
+      complete: () => observer.complete()      
     })
   });
 }
@@ -61,9 +63,11 @@ function map<T, R>(selector: (value: T, index: number) => R) {
 
           observer.next(value);
         }
-      })
+      }, 
+      error: err => observer.error(err),
+      complete: () => observer.complete()
     });
-  }
+  };
 }
 
 const num$ = Observable.range(0, 100)
