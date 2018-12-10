@@ -2,7 +2,7 @@
 
 In the [previous entry](../06/readme.md), we talked about converting existing events to RxJS Observables.  Today, we're going to take our adventure a little bit further with chaining operations together.
 
-## Adding operators the old fasioned way
+## Adding operators the old fashioned way
 
 In previous releases, RxJS would use dot-chaining for operators, meaning we would add methods such as `map`, `filter`, `scan` and others directly to the prototype so we could achieve a nice fluent API.  This had some advantages of a complete toolbox where you could easily consume new operators by adding it to the prototype.  
 
