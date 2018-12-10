@@ -1,4 +1,6 @@
-import { 
+/// <reference path="raf.d.ts" />
+
+import {
   Observable,
   SchedulerLike,
   animationFrameScheduler
@@ -23,5 +25,5 @@ const subscription = once(42, animationFrameScheduler)
     complete: () => console.log(`Complete!`)
   });
 
-// If we really don't want it to happen  
+// If we really don't want it to happen
 //subscription.unsubscribe();
