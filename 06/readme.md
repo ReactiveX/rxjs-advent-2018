@@ -59,7 +59,7 @@ Data: baz
 Data: quux
 ```
 
-Let's get a little bit more advanced where we want to completely convert an `EventEmitter` to an Observable, where we can capture not only the 'data' event, but also react to the 'error' and 'close' events as well.  We would need a way to throw the error if an error happens in the 'error' event.  We can merge these twp streams together using the `merge` operation which creates a single observable which encompasses all two events.
+Let's get a little bit more advanced where we want to completely convert an `EventEmitter` to an Observable, where we can capture not only the 'data' event, but also react to the 'error' and 'close' events as well.  We would need a way to throw the error if an error happens in the 'error' event.  We can merge these two streams together using the `merge` operation which creates a single observable which encompasses all two events.
 
 ```typescript
 import { EventEmitter } from 'events';
@@ -103,7 +103,7 @@ Error: Error: woops
 
 ## Converting events to Observables with fromEventPattern
 
-Sometimes, our event-based contract is not quite as straight forward as the DOM, Node.js `EventEmitter` or jQuery.  Using `fromEventPattern` you can encompass your own way of attaching and detaching handlers from your event emitter, whatever it may be.  For example, you could model if your API uses `attachEvent` and `detachEvent` as the subscription pair.
+Sometimes, our event-based contract is not quite as straightforward as the DOM, Node.js `EventEmitter` or jQuery.  Using `fromEventPattern` you can encompass your own way of attaching and detaching handlers from your event emitter, whatever it may be.  For example, you could model if your API uses `attachEvent` and `detachEvent` as the subscription pair.
 
 ```typescript
 import { fromEventPattern } from 'rxjs';
@@ -125,4 +125,4 @@ const event$ = fromEventPattern(
 );
 ```
 
-That's enough for today! Join me tomorrow for our next adventure where we're getting in to the `pipe` finally!
+That's enough for today! Join me tomorrow for our next adventure where we're getting into the `pipe` finally!
