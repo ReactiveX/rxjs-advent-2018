@@ -68,7 +68,7 @@ const observer = {
 Finally, we can tie it all together, calling `subscribe` on the Observable with our Observer instance.  This will return our subscription that we can unsubscribe from at any time.  Note that since the inner observer calls `complete`, the teardown logic will happen automatically and the subscription automatically unsubscribes.
 
 ```typescript
-// Subscribe to the Observable with our obsercer
+// Subscribe to the Observable with our observer
 const subscription = number$.subscribe(observer);
 ```
 
@@ -86,7 +86,7 @@ Complete!
 We can terminate this sequence early, however, since it will take 5 seconds to complete, we could cancel after 2.5 seconds.
 
 ```typescript
-// Subscribe to the Observable with our obsercer
+// Subscribe to the Observable with our observer
 const subscription = number$.subscribe(observer);
 
 // Terminate the sequence after 2.5 seconds
