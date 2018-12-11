@@ -4,7 +4,7 @@ In the [previous entry](../07/readme.md), we covered how RxJS has evolved from u
 
 ## Mapping one value to another
 
-One of the most common operations over data structure is [`map`](https://en.wikipedia.org/wiki/Map_(higher-order_function) which applies to each element of a [functor](https://en.wikipedia.org/wiki/Functor), such as arrays, and returns a new instance with results in the same order.  In simple terms, a functor is just anything that supports that mapping operation such as an array, a Promise, and yes even an Observable.  In JavaScript, we have [`Array.prototype.map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) which creates a new array with the projected values.  In RxJS, we give you the operator `map` in the `rxjs/operators` imports.
+One of the most common operations over data structure is [`map`](https://en.wikipedia.org/wiki/Map_%28higher-order_function%29) which applies to each element of a [functor](https://en.wikipedia.org/wiki/Functor), such as arrays, and returns a new instance with results in the same order.  In simple terms, a functor is just anything that supports that mapping operation such as an array, a Promise, and yes even an Observable.  In JavaScript, we have [`Array.prototype.map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) which creates a new array with the projected values.  In RxJS, we give you the operator `map` in the `rxjs/operators` imports.
 
 As we showed in the previous post, implementing `map` in JavaScript is pretty simple, for example we could have implemented `map` ourselves on an Array.  This creates a new array, filling the array with a function call on each element from the source array, and returning the new array.
 
@@ -40,7 +40,7 @@ for (let item of mapped) {
 // [1, 4, 9]
 ```
 
-Implementing this in Observables is almost as straight forward, except that we have to take care of the error case should our selector function throw an error, and forwarding the error and completion channels on through.
+Implementing this in Observables is almost as straightforward, except that we have to take care of the error case should our selector function throw an error, and forwarding the error and completion channels on through.
 
 ```typescript
 function map<T, R>(selector: (value: T, index: number, thisArg?: any) => R) {
@@ -88,7 +88,7 @@ obs$.subscribe({
 
 ## Filtering Data
 
-Another higher-ordered function that's often used is [`filter`](https://en.wikipedia.org/wiki/Filter_(higher-order_function), which iterates a given data structure, and creates a new data structure where the predicate returns true.  No magical functional programming jargon like functor required for this operator!  In JavaScript, we have it implemented for us on the Array with [`Array.prototype.filter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
+Another higher-order function that's often used is [`filter`](https://en.wikipedia.org/wiki/Filter_%28higher-order_function%29), which iterates over a given data structure, and creates a new data structure where the predicate returns true.  No magical functional programming jargon like functor required for this operator!  In JavaScript, we have it implemented for us on the Array with [`Array.prototype.filter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
 
 We could easily implement this ourselves much like we did for `map` above, iterating over the array and only including values where the predicate evaluates to true.
 
@@ -126,7 +126,7 @@ for (let item of filtered) {
 // [2]
 ```
 
-Lastly, implementing this for Observables is pretty much as straight forward, sending values to `observer.next` only if the predicate returns true.
+Lastly, implementing this for Observables is pretty much as straightforward, sending values to `observer.next` only if the predicate returns true.
 
 ```typescript
 function filter<T>(predicate: predicate: (value: T, index: number) => boolean, thisArg?: any) {
