@@ -5,8 +5,9 @@ This is the first annual RxJS Advent Calendar with 25 lessons on using [RxJS](ht
 ## Daily Entries
 
 To run each entry, simply using ts-node such as the following:
+
 ```bash
-$ npx ts-node 01/index.ts
+npx ts-node 01/index.ts
 ```
 
 1. [Creating An Observable](01/readme.md)
@@ -19,6 +20,7 @@ $ npx ts-node 01/index.ts
 8. [Mapping and Filtering](08/readme.md)
 9. [Reducing an Scanning](09/readme.md)
 10. [Starting with data, ending with data, and defaulting if empty](10/readme.md)
+11. [On the Subject of Subjects](11/readme.md)
 
 ## License
 
