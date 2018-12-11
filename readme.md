@@ -18,7 +18,7 @@ npx ts-node 01/index.ts
 6. [Converting Events to Observables](06/readme.md)
 7. [Pipe Dreams](07/readme.md)
 8. [Mapping and Filtering](08/readme.md)
-9. [Reducing an Scanning](09/readme.md)
+9. [Reducing and Scanning](09/readme.md)
 10. [Starting with data, ending with data, and defaulting if empty](10/readme.md)
 11. [On the Subject of Subjects](11/readme.md)
 
