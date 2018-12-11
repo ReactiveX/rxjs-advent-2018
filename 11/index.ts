@@ -46,14 +46,16 @@ result$.subscribe({
 */
 const event$ = new BehaviorSubject<string>('initial value');
 
+console.log(`Current value: ${event$.getValue()}`);
+
 event$.subscribe({
-  next: val => console.log(`First subscriber: ${val}`)
+  next: val => console.log(`Data: ${val}`)
 });
 
 event$.next('hello world');
-event$.next('goodbye world');
-event$.complete();
 
-event$.subscribe({
-  next: val => console.log(`Second subscriber: ${val}`)
-});
+console.log(`Current value: ${event$.getValue()}`);
+
+event$.next('goodbye world');
+
+console.log(`Current value: ${event$.getValue()}`);

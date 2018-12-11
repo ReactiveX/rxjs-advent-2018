@@ -137,4 +137,32 @@ event$.next('goodbye world');
 // Data: goodbye world
 ```
 
+What makes the `BehaviorSubject` even more interesting is that you can peek at its current value via the `getValue()` method call.
+
+```typescript
+import { BehaviorSubject } from 'rxjs';
+
+const event$ = new BehaviorSubject<string>('initial value');
+
+console.log(`Current value: ${event$.getValue()}`);
+
+event$.subscribe({
+  next: val => console.log(`Data: ${val}`)
+});
+
+event$.next('hello world');
+
+console.log(`Current value: ${event$.getValue()}`);
+
+event$.next('goodbye world');
+
+console.log(`Current value: ${event$.getValue()}`);
+// Current value: initial value
+// Data: initial value
+// Data: hello world
+// Current value: hello world
+// Data: goodbye world
+// Current value: goodbye world
+```
+
 I hope this gives you a clear understanding of Subjects and why you might use each.  This will serve as a basis for creating a Redux clone going forward, stay tuned!
