@@ -21,6 +21,7 @@ npx ts-node 01/index.ts
 9. [Reducing and Scanning](09/readme.md)
 10. [Starting with data, ending with data, and defaulting if empty](10/readme.md)
 11. [On the Subject of Subjects](11/readme.md)
+12. [Implementing Redux with RxJS](12/readme.md)
 
 ## License
 

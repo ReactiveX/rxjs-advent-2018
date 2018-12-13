@@ -1,4 +1,4 @@
-# On the Subject of Subjects
+# Day 11 - On the Subject of Subjects
 
 In the [previous entry](../10/readme.md), we covered dealing with prepending, appending and substituting data if the stream is empty.   Before we get started with our Redux clone, I wanted to talk briefly on the subject of Subjects.  As we've talked about earlier, we have a number of concepts:
 
