@@ -1,8 +1,8 @@
 # Day 10 - Starting with data, ending with data, and defaulting if empty
 
-In the [previous entry](../09/readme.md), we covered aggregation operations via `reduce` and `scan`.  Today, we're going to dive deeper into some operators where you can add that initial state to your observable, as well as add anything to the end.  And in the cases where your data stream is empty, we can accomodate for that too with yet another operator.
+In the [previous entry](../09/readme.md), we covered aggregation operations via `reduce` and `scan`.  Today, we're going to dive deeper into some operators where you can add that initial state to your observable, as well as add anything to the end.  And in the cases where your data stream is empty, we can accommodate for that too with yet another operator.
 
-## Starting off with statWith
+## Starting off with startWith
 
 The first operator we're going to look at is `startWith`, which allows us to prepend data to the beginning of an Observable sequence.  As with other operators that create things, this also takes a scheduler which allows you to control the concurrency.
 
@@ -55,7 +55,7 @@ num$.subscribe({
 // Next 4
 ```
 
-This is useful of course if you want to seed your stream with default data, such as an initial state for mouse movements with an x and y coorindate.
+This is useful of course if you want to seed your stream with default data, such as an initial state for mouse movements with an x and y coordinate.
 
 ## Ending our sequence with endWith
 
@@ -79,7 +79,7 @@ function* endWith(source: Iterable<T>, ...args: Array<T>) {
 }
 ```
 
-Like above, could implement this in RxJS instead of building from scratch, simply implement via the following using `concat` and `of`.  
+Like above, we could implement this in RxJS instead of building from scratch, simply implement via the following using `concat` and `of`.  
 
 ```typescript
 import { concat, of } from 'rxjs';
