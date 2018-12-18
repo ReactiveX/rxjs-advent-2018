@@ -83,8 +83,8 @@ import { scan, startWith } from 'rxjs/operators';
 const store$ = new Subject();
 const subscription = store$
   .pipe(
-    scan(reducer, initialState),
     startWith(initialState)
+    scan(reducer),
   )
   .subscribe({
     next: render
