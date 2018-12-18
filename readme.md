@@ -24,6 +24,7 @@ npx ts-node 01/index.ts
 12. [Implementing Redux with RxJS](12/readme.md)
 13. [Combining Sequences Part 1](13/readme.md)
 14. [Combining Sequences Part Deux](14/readme.md)
+15. [Combining Sequences of Sequences](15/readme.md)
 
 ## License
 
