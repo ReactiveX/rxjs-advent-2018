@@ -26,6 +26,7 @@ npx ts-node 01/index.ts
 14. [Combining Sequences Part Deux](14/readme.md)
 15. [Combining Sequences of Sequences](15/readme.md)
 16. [Projecting to new sequences](16/readme.md)
+17. [Getting only the latest data](17/readme.md)
 
 ## License
 
