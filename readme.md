@@ -1,7 +1,7 @@
 # 2018 RxJS Advent Calendar
 
 This is the first annual RxJS Advent Calendar with 25 lessons on using [RxJS](https://github.com/reactivex/rxjs). All advent entries are written in TypeScript and can be run via in Node.js using `npx` and [ts-node](https://www.npmjs.com/package/ts-node).  Follow along online at my Twitch Channel, [BluerThanBlueFalcon](https://www.twitch.tv/bluerthanbluefalcon/)!
- 
+
 ## Daily Entries
 
 To run each entry, simply using ts-node such as the following:
@@ -28,6 +28,13 @@ npx ts-node 01/index.ts
 16. [Projecting to new sequences](16/readme.md)
 17. [Getting only the latest data](17/readme.md)
 18. [Getting distinct data](18/readme.md)
+19. [Throttling and Debouncing Observables](19/readme.md)
+20. [Skip and Take Observables](20/readme.md)
+21. [SkipUntil and TakeUntil](21/readme.md)
+22. [Error Handling with Observables](22/readme.md)
+23. [Buffers and Windows](23/readme.md)
+24. [Parallelizing Work with ForkJoin](24/readme.md)
+25. [The RxJS Community](25/readme.md)
 
 ## License
 
