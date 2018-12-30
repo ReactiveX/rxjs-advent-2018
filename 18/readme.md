@@ -46,7 +46,7 @@ person$.next({ name: 'Frank' });
 // Distinct Item: Frank
 ```
 
-Note that since this is collecting distinct values in an internal hash set, this could grow infinitely large in size over time.  There is an optional overload which takes an Observable, which when fires, clears the internal cache.  For example, we could specify an that fires every five seconds clears the cache, so we have a rolling window of distinct values.
+Note that since this is collecting distinct values in an internal hash set, this could grow infinitely large in size over time.  There is an optional overload which takes an Observable, which when fires, clears the internal cache.  For example, we could specify an Observable that fires every five seconds, which clears the cache, so we have a rolling window of distinct values.
 
 ```typescript
 import { Subject, interval } from 'rxjs';
@@ -94,7 +94,7 @@ num$.next(2);
 num$.next(1);
 // Distinct Item: 1
 num$.next(2);
-// Distinct Item: 1
+// Distinct Item: 2
 num$.next(2);
 num$.next(2);
 ```
@@ -117,9 +117,10 @@ person$.next({ name: 'Mary' });
 // Distinct Item: Mary
 person$.next({ name: 'Mary' });
 person$.next({ name: 'Frank' });
+// Distinct Item: Frank
 ```
 
-Finally, there is another way of comparing with a given key, for example, we could extract the 'name' from our data and use that as a comparator. 
+Finally, there is another way of comparing with a given key, for example, we could extract the 'name' from our data and use that as a comparator.
 
 ```typescript
 interface Person { name: string }
@@ -137,6 +138,7 @@ person$.next({ name: 'Mary' });
 // Distinct Item: Mary
 person$.next({ name: 'Mary' });
 person$.next({ name: 'Frank' });
+// Distinct Item: Frank
 ```
 
 So, this is one technique for taming user input for our autosuggest scenario.  We'll cover time based ones tomorrow, so stay tuned!

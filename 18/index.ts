@@ -31,3 +31,4 @@ person$.next({ name: 'Mary' });
 // Distinct Item: Mary
 person$.next({ name: 'Mary' });
 person$.next({ name: 'Frank' });
+// Distinct Item: Frank
