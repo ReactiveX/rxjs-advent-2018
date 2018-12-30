@@ -30,11 +30,11 @@ npx ts-node 01/index.ts
 18. [Getting distinct data](18/readme.md)
 19. [Throttling and Debouncing Observables](19/readme.md)
 20. [Skip and Take Observables](20/readme.md)
-21. [SkipUntil and TakeUntil](21/readme.md)
+21. [Side Effects with Tap](21/readme.md)
 22. [Error Handling with Observables](22/readme.md)
 23. [Buffers and Windows](23/readme.md)
 24. [Parallelizing Work with ForkJoin](24/readme.md)
-25. [The RxJS Community](25/readme.md)
+25. [Grouping work with groupBy](25/readme.md)
 
 ## License
 
