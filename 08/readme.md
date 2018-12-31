@@ -1,4 +1,4 @@
-# Day 8 - Mapping and Filtering
+# Day 8 - Mapping, Plucking, Tapping, and Filtering
 
 In the [previous entry](../07/readme.md), we covered how RxJS has evolved from using dot chaining to "lettable" operators, and finally how we ended up with `pipe` to chain our operators together.  Today, we're going to cover probably the two most used operators, `map` and `filter`.  One of the early goals of RxJS was to make it as easy as possible to learn, so if you knew the [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) methods such as [`Array.prototype.map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`Array.prototype.filter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), [`Array.prototype.reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce), they operate pretty much the same way as Array does, except for being a pull collection, it becomes a push collection with values over time.
 
@@ -84,6 +84,60 @@ obs$.subscribe({
 // Next: 1
 // Next: 4
 // Next: 9
+```
+
+## Plucking Data
+
+With the `map` operator, we can easily project values to a new sequence.  But, what if we wanted to just pull out values from the sequence itself?  To do that, we have the `pluck` operator, which allows us to specify which properties to pull out.  As you will notice, we can specify multiple values which recursively walks the object to pluck that desired value.
+
+```typescript
+import { from } from 'rxjs';
+import { pluck } from 'rxjs/operators';
+
+const people = [
+  { name: 'Kim' },
+  { name: 'Bob' },
+  { name: 'Joe' }
+];
+
+const person$ = from(people).pipe(pluck('name'));
+
+const props = [
+  { prop1: { prop2: 'Kim' } },
+  { prop1: { prop2: 'Bob' } },
+  { prop1: { prop2: 'Joe' } }
+];
+
+const data$ = from(data).pipe(pluck('prop1', 'prop2'));
+```
+
+## Tapping Data
+
+While `map` allows us to project a value to a new sequence.  But, what if we want to cause a side effect for each item, while project the current value to a new sequence?  That's what the `tap` operator is for, which allows us to intercept not only `next` calls, but also `error` and `complete` calls as well.  This is good for when during a sequence, some side effect needs to happen, for example a progress status to be updated, while not affecting the stream itself.
+
+```typescript
+import { of } from 'rxjs';
+import { tap } from 'rxjs/operators';
+
+const val$ = of(1, 2, 3).pipe(
+  tap({
+    next: item => console.log(`Tapped next: ${item}`),
+    complete: () => console.log('Tapped complete')
+  })
+);
+
+const subscription = val$.subscribe({
+  next: item => console.log(`Next: ${item}`),
+  complete: () => console.log('Done')
+});
+// Tapped next: 1
+// Next: 1
+// Tapped next: 2
+// Next: 2
+// Tapped next: 3
+// Next: 3
+// Tapped complete
+// Done
 ```
 
 ## Filtering Data
