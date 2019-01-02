@@ -29,7 +29,7 @@ With the advent of Iterables in ES2015, we could generalize this a bit more to a
 function* map<T, R>(source: Iterable<T>, selector: (value: T, index: number) => R, thisArg?: any): Iterable<R> {
   let i = 0;
   for (let item of source) {
-    yield selector.call(item, i++);
+    yield selector.call(thisArg, item, i++);
   }
 }
 
