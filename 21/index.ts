@@ -19,6 +19,32 @@ import {
   tap
 } from 'rxjs/operators';
 
+let retryCount = 0;
+const obs$ = new Observable<number>(observer => {
+  if (++retryCount == 3) {
+    observer.next(42);
+    observer.complete();
+  } else {
+    console.log('failed call');
+    observer.error(new Error('woops'));
+  }
+});
+
+const num$ = obs$.pipe(
+  retryWhen(errors => {
+    return zip(errors, range(1, 3)).pipe(
+      map(([_, index]) => index),
+      tap(item => console.log(`Retrying after ${item} seconds`)),
+      delayWhen(item => timer(item * 1000))
+    );
+  })
+);
+
+num$.subscribe({
+  next: item => console.log(`Next: ${item}`),
+  error: err => console.log(`Error: ${err.message}`)
+});
+
 /*
 const num$ = of(1, 2, 3).pipe(
   map(item => { 
@@ -84,7 +110,7 @@ throwError(new Error('woops')).pipe(
   complete: () => console.log('Done')
 });
 */
-
+/*
 let retryCount = 0;
 const obs$ = new Observable<number>(observer => {
   if (++retryCount == 3) {
@@ -99,6 +125,7 @@ const obs$ = new Observable<number>(observer => {
 const num$ = obs$.pipe(retry(3));
 */
 
+/*
 const num$ = obs$.pipe(
   retryWhen(errors => {
     return zip(errors, range(1, 3)).pipe(
@@ -114,3 +141,5 @@ num$.subscribe({
   next: item => console.log(`Next: ${item}`),
   error: err => console.log(`Error: ${err.message}`)
 });
+
+*/
