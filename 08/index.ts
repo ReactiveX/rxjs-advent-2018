@@ -16,7 +16,7 @@ mapArr([1, 2, 3], x => x * x).forEach(x => console.log(`Next: ${x}`));
 function* mapIter<T, R>(source: Iterable<T>, selector: (value: T, index: number) => R, thisArg?: any): Iterable<R> {
   let i = 0;
   for (let item of source) {
-    yield selector.call(item, i++);
+    yield selector.call(thisArg, item, i++);
   }
 }
 
